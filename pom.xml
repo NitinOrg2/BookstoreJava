@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>BookStoreJava_21403_lines</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.checkmarx.maven</groupId>
+                <artifactId>checkmarx-maven-plugin</artifactId>
+                <version>2022.2.3</version>
+                <configuration>
+                    <url>http://localhost</url>
+                    <username>Admin@cx</username>
+                    <password>Admin@12345</password>
+                    <fullTeamPath>CxServer</fullTeamPath>
+                    <preset>all</preset>
+                    <isIncrementalScan>false</isIncrementalScan>
+                    <highSeveritiesThreshold>1</highSeveritiesThreshold>
+                    <mediumSeveritiesThreshold>20</mediumSeveritiesThreshold>
+                    <lowSeveritiesThreshold>30</lowSeveritiesThreshold>
+                    <fileExclusions></fileExclusions>
+                    <folderExclusions></folderExclusions>
+                    <generatePDFReport>true</generatePDFReport>
+                    <isSynchronous>true</isSynchronous>
+                    <outputDirectory>C:\Users\KishorH\Downloads\MavenTest</outputDirectory>
+                    <projectName>Project 22</projectName>
+                    <scanTimeoutInMinutes></scanTimeoutInMinutes>
+                    <disableCertificateVerification>false</disableCertificateVerification>
+                    <osaEnabled>false</osaEnabled>
+                    <osaHighSeveritiesThreshold>1</osaHighSeveritiesThreshold>
+                    <osaMediumSeveritiesThreshold>0</osaMediumSeveritiesThreshold>
+                    <osaLowSeveritiesThreshold>0</osaLowSeveritiesThreshold>
+                    <osaExclusions></osaExclusions>
+                    <osaIgnoreScopes>1</osaIgnoreScopes>
+                    <osaGenerateJsonReport>0</osaGenerateJsonReport>
+                    <enablePolicyViolations>true</enablePolicyViolations>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
