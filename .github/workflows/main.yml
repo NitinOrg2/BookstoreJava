@@ -30,7 +30,7 @@ jobs:
       uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.5 #Github Action version
       with:
         project: SFATEST # <-- Insert Checkmarx SAST Project Name
-        team: ${{ secrets.CHECKMARX_TEAMS }}
+        team: ${{ secrets.TEAM }}
         checkmarx_url: ${{ secrets.CHECKMARX_URL }} # To be stored in GitHub Secrets.
         checkmarx_username: ${{ secrets.CHECKMARX_USER }} # To be stored in GitHub Secrets.
         checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }} # To be stored in GitHub Secrets.
