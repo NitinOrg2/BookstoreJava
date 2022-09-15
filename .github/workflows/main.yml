@@ -29,7 +29,7 @@ jobs:
     - name: Checkmarx CxFlow Action
       uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.5 #Github Action version
       with:
-        project: SFATEST12 # <-- Insert Checkmarx SAST Project Name
+        project: SFATEST13 # <-- Insert Checkmarx SAST Project Name
         team: ${{ secrets.TEAM }}
         checkmarx_url: https://a5c6-150-129-159-199.ngrok.io # To be stored in GitHub Secrets.
         checkmarx_username: ${{ secrets.CHECKMARX_USERNAME }} # To be stored in GitHub Secrets.
@@ -37,5 +37,4 @@ jobs:
         checkmarx_client_secret: ${{ secrets.CHECKMARX_CLIENT_SECRET }}
         break_build: false
         scanners: sast
-        bug_tracker: GitHub
-        params: --cx-flow.zip-exclude=\.git/.*, .*\.png --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --cx-flow.filterSeverity --cx-flow.filterCategory  --checkmarx.disable-clubbing=true  
+        params: --cx-flow.zip-exclude=\.git/.*, .*\.png --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --cx-flow.filterSeverity --cx-flow.filterCategory  --checkmarx.disable-clubbing=true --logging.level.org.springframework.web.client.RestTemplate=TRACE --logging.level.com.checkmarx.flow.service=DEBUG --logging.level.org.apache.http.wire=TRACE  
