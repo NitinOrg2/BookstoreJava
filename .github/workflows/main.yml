@@ -31,7 +31,7 @@ jobs:
       with:
         project: SFATEST12 # <-- Insert Checkmarx SAST Project Name
         team: ${{ secrets.TEAM }}
-        checkmarx_url: ${{ secrets.CHECKMARX_URL }} # To be stored in GitHub Secrets.
+        checkmarx_url: https://a5c6-150-129-159-199.ngrok.io # To be stored in GitHub Secrets.
         checkmarx_username: ${{ secrets.CHECKMARX_USERNAME }} # To be stored in GitHub Secrets.
         checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }} # To be stored in GitHub Secrets.
         checkmarx_client_secret: ${{ secrets.CHECKMARX_CLIENT_SECRET }}
