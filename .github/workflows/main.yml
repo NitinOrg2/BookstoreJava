@@ -38,5 +38,4 @@ jobs:
         break_build: false
         scanners: sast
         bug_tracker: GitHub
-        zip-exclude: \.git/.*, .*\.png
-        params: --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --cx-flow.filterSeverity --cx-flow.filterCategory  --checkmarx.disable-clubbing=true  
+        params: --zip-exclude='\.git/.*, .*\.png' --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --cx-flow.filterSeverity --cx-flow.filterCategory  --checkmarx.disable-clubbing=true  
