@@ -27,10 +27,10 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Checkmarx CxFlow Action
-      uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.5 #Github Action version
+      uses: checkmarx-ts/checkmarx-cxflow-github-action@master #Github Action version
       with:
         project: SFATESTExclude # <-- Insert Checkmarx SAST Project Name
-        team: CxServer
+        team: /CxServer
         checkmarx_url: https://74de-150-129-159-209.ngrok.io # To be stored in GitHub Secrets.
         checkmarx_username: Admin@cx # To be stored in GitHub Secrets.
         checkmarx_password: Admin@12345 # To be stored in GitHub Secrets.
