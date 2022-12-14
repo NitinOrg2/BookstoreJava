@@ -22,6 +22,12 @@ public class Books_jsp extends HttpJspBase {
   static final int adSearch_ = 4;
   static final int ad_Search_ = 5;
   static final String appPath   ="/";
+  static final int adText = 1;
+  static final int adDate = 2;
+  static final int adNumber = 3;
+  static final int adSearch_ = 4;
+  static final int ad_Search_ = 5;
+  static final String appPath   ="/";
 
 //Database connection string
 
