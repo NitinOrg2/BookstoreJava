@@ -116,6 +116,8 @@ public class BookDetail_jsp extends HttpJspBase {
     if ( strValue == null ) return "";
     if ( strValue.compareTo("") == 0 ) return "";
     return java.net.URLEncoder.encode(strValue);
+    return java.net.URLEncoder.encode(strValue);
+    return java.net.URLEncoder.encode(strValue);
   }
 
   String toHTML(String value) {
