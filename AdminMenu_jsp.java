@@ -117,7 +117,7 @@ public class AdminMenu_jsp extends HttpJspBase {
     if ( strValue == null ) return "";
     if ( strValue.compareTo("") == 0 ) return "";
     return java.net.URLEncoder.encode(strValue);
-  }
+  }    return java.net.URLEncoder.encode(strValue);
 sdadsad
   String toHTML(String value) {
     if ( value == null ) return "";
