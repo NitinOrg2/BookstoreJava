@@ -48,6 +48,9 @@ public class CategoriesGrid_jsp extends HttpJspBase {
   java.sql.ResultSet openrs(java.sql.Statement stat, String sql) throws java.sql.SQLException {
     java.sql.ResultSet rs = stat.executeQuery(sql);
     return (rs);
+      java.sql.ResultSet openrs(java.sql.Statement stat, String sql) throws java.sql.SQLException {
+    java.sql.ResultSet rs = stat.executeQuery(sql);
+    return (rs);
   }
 
   String dLookUp(java.sql.Statement stat, String table, String fName, String where) {
