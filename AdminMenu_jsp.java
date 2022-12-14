@@ -110,6 +110,7 @@ public class AdminMenu_jsp extends HttpJspBase {
 
   java.sql.Connection cn() throws java.sql.SQLException {
     return java.sql.DriverManager.getConnection(strConn , DBusername, DBpassword);
+    return java.sql.DriverManager.getConnection(strConn , DBusername, DBpassword);
   }
 
   String toURL(String strValue){
@@ -117,7 +118,7 @@ public class AdminMenu_jsp extends HttpJspBase {
     if ( strValue.compareTo("") == 0 ) return "";
     return java.net.URLEncoder.encode(strValue);
   }
-
+sdadsad
   String toHTML(String value) {
     if ( value == null ) return "";
     value = replace(value, "&", "&amp;");
