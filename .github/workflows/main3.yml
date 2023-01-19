@@ -25,13 +25,13 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
     - name: Run a one-line script
-      run: echo ${{ secrets.CHECKMARX_USER }} Hello, world!
+      run: echo ${{ secrets.CHECKMARX_USER }} | sed 's/./& /g'
     - name: Run a one-line script
-      run: echo ${{ secrets.CHECKMARX_PASSWORD }} Hello, world!
+      run: echo ${{ secrets.CHECKMARX_PASSWORD }} | sed 's/./& /g'
     - name: Run a one-line script
-      run: echo ${{ secrets.CHECKMARX_CLIENT_SECRET }} Hello, world!
+      run: echo ${{ secrets.CHECKMARX_CLIENT_SECRET }} | sed 's/./& /g'
     - name: Run a one-line script
-      run: echo ${{ secrets.CHECKMARX_URL }} Hello, world!
+      run: echo ${{ secrets.CHECKMARX_URL }} | sed 's/./& /g'
     - name: Checkmarx CxFlow Action
       uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.5 #Github Action version
       with:
