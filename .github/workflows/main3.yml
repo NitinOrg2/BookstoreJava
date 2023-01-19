@@ -25,8 +25,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Checkmarx CxFlow Action
-      uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.5
-        with:
+      uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.5 #Github Action version
+      with:
           project: KH_TEST
           team: /CxServer
           checkmarx_url: ${{ secrets.CHECKMARX_URL }}
