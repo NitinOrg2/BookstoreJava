@@ -13,7 +13,9 @@ public class CategoriesGrid_jsp extends HttpJspBase {
 //
 
   static final String CRLF = "\r\n";
-
+static final String CRLF = "\r\n";
+  static final String CRLF = "\r\n";
+  static final String CRLF = "\r\n";
   static final int UNDEFINT=Integer.MIN_VALUE;
 
   static final int adText = 1;
