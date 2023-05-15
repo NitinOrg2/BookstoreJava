@@ -27,12 +27,19 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Checkmarx CxFlow Action
-      uses: checkmarx-ts/checkmarx-cxflow-github-action@master #Github Action version
+      uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.4 #Github Action version
       with:
-        project: SFATESTExclude # <-- Insert Checkmarx SAST Project Name
-        team: /CxServer
-        checkmarx_url: https://74de-150-129-159-209.ngrok.io # To be stored in GitHub Secrets.
-        checkmarx_username: Admin@cx # To be stored in GitHub Secrets.
-        checkmarx_password: Admin@12345 # To be stored in GitHub Secrets.
-        checkmarx_client_secret: ${{ secrets.CHECKMARX_CLIENT_SECRET }}
-        params: --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} 
+        project: ${{ secrets.CHECKMARX_PROJECT }} # <-- Insert Checkmarx SAST Project Name
+        team: ${{ secrets.CHECKMARX_TEAMS }}
+        checkmarx_url: ${{ secrets.CHECKMARX_URL }} # To be stored in GitHub Secrets.
+        checkmarx_username: ${{ secrets.CHECKMARX_USER }} # To be stored in GitHub Secrets.
+        checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }} # To be stored in GitHub Secrets.
+        checkmarx_client_secret: ${{ secrets.CHECKMARX_CLIENT_SECRET }} # To be stored in GitHub Secrets.
+        break_build: false
+        scanners: sast
+        bug_tracker: Sarif
+        params: --namespace=${{ github.repository_owner }} --checkmarx.settings-override=true --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref_name }} --cx-flow.filterSeverity --cx-flow.filterCategory  --checkmarx.disable-clubbing=true
+    - name: Upload SARIF file
+      uses: github/codeql-action/upload-sarif@v1
+      with:
+        sarif_file: cx.sarif
